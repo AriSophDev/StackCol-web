@@ -20,17 +20,18 @@
   </nav>
 </header>
 
-<script type="text/typescript">
-  document.addEventListener("DOMContentLoaded", function () {
-    console.log("chi silve")
-  const scrollButton = document.getElementById("scrollButton");
-  const sectionToScrollTo = document.getElementById("Contact");
-
-  if (scrollButton && sectionToScrollTo) {
-    scrollButton.addEventListener("click", function () {
-      sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
-    });
-  }
-});
-
-</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const scrollButton = document.getElementById("scrollButton");
+    const sectionToScrollTo = document.getElementById("Contact");
+  
+    if (scrollButton && sectionToScrollTo) {
+        console.log("chi silve")
+      scrollButton.addEventListener("click", function () {
+        sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+  
+  
+  </script>
