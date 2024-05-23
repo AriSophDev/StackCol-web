@@ -14,9 +14,23 @@
           <li class="text-black md:mr-12"><a href="#">Servicios</a></li>
           <li class="text-black md:mr-12"><a href="#">Sobre Nosotros</a></li>
           <li class="md:mr-12">
-              <button class="rounded-full border-2 border-black px-6 py-1 font-medium text-black transition-colors hover:bg-black hover:text-white">Contacto</button>
+              <button id="scrollButton" class="rounded-full border-2 border-black px-6 py-1 font-medium text-black transition-colors hover:bg-black hover:text-white">Contacto</button>
           </li>
       </ul>
   </nav>
 </header>
 
+<script type="text/typescript">
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("chi silve")
+  const scrollButton = document.getElementById("scrollButton");
+  const sectionToScrollTo = document.getElementById("Contact");
+
+  if (scrollButton && sectionToScrollTo) {
+    scrollButton.addEventListener("click", function () {
+      sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+
+</script>
