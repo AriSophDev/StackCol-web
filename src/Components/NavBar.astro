@@ -11,8 +11,8 @@
   </label>
   <nav aria-label="Header Navigation" class="peer-checked:mt-8 peer-checked:max-h-56 flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all md:ml-24 md:max-h-full md:flex-row md:items-start">
       <ul class="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0">
-          <li class="text-black md:mr-12"><a href="#">Servicios</a></li>
-          <li class="text-black md:mr-12"><a href="#">Sobre Nosotros</a></li>
+          <li id="Services" class="text-black md:mr-12">Servicios</li>
+          <li id="about" class="text-black md:mr-12">Sobre Nosotros</li>
           <li class="md:mr-12">
               <button id="scrollButton" class="rounded-full border-2 border-black px-6 py-1 font-medium text-black transition-colors hover:bg-black hover:text-white">Contacto</button>
           </li>
@@ -32,6 +32,29 @@
       });
     }
   });
-  
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const servicesLink = document.getElementById("Services");
+    const serviceLink = document.getElementById("Service");
+
+    if (servicesLink && serviceLink) {
+      servicesLink.addEventListener("click", function () {
+        serviceLink.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const aboutLink = document.getElementById("about");
+    const aboutLinks = document.getElementById("About");
+
+    if (aboutLink && aboutLinks) {
+      aboutLink.addEventListener("click", function () {
+        aboutLinks.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+
   
   </script>
