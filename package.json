@@ -13,6 +13,10 @@
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.9.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
     "tailwind": "^4.0.0",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
