@@ -1,6 +1,15 @@
+---
+import Logoimg from './img/logo.png'
+
+const Logo = "Logo"
+---
+
+
 <header class="fixed top-0 left-0 w-full z-50 bg-white flex flex-col overflow-hidden px-4 py-4 text-blue-900 md:flex-row md:items-center">
   <a href="#" class="flex items-center cursor-pointer whitespace-nowrap text-2xl font-black text-blue-500">
-    <img src="../Components/imag/logo.png" alt="logo" class="h-12 w-auto mr-2">
+    <img src={Logoimg.src} 
+    alt={Logo} 
+    class="h-12 w-auto mr-2">
 </a>
   <input type="checkbox" class="peer hidden" id="navbar-open" />
   <label class="absolute top-5 right-7 cursor-pointer md:hidden text-blue-600" for="navbar-open">
