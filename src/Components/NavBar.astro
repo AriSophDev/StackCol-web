@@ -6,7 +6,7 @@ const Logo = "Logo"
 
 
 <header class="fixed top-0 left-0 w-full z-50 bg-white flex flex-col overflow-hidden px-4 py-4 text-blue-900 md:flex-row md:items-center">
-  <a href="#" class="flex items-center cursor-pointer whitespace-nowrap text-2xl font-black text-blue-500">
+  <a href=(Home) class="flex items-center cursor-pointer whitespace-nowrap text-2xl font-black text-blue-500">
     <img src={Logoimg.src} 
     alt={Logo} 
     class="h-12 w-auto mr-2">
@@ -40,8 +40,7 @@ const Logo = "Logo"
         sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
       });
     }
-  });
-
+    });
 
   document.addEventListener("DOMContentLoaded", function () {
     const servicesLink = document.getElementById("Services");
