@@ -11,7 +11,7 @@
       >
         Contactanos
       </h2>
-      <form id="contact-form" class="space-y-8">
+      <form  action="https://formsubmit.co/c591bc0c2f428f9901a1cfc327a19bc9" method="POST" id="contact-form" class="space-y-8">
         <div>
           <label
             for="email"
@@ -19,9 +19,12 @@
             >Tu correo</label
           >
           <input
+              name="name"
             type="email"
             id="email"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500
+            focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+            dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
             placeholder="name@flowbite.com"
             required
           />
@@ -33,9 +36,12 @@
             >Razon</label
           >
           <input
+              name="subject"
             type="text"
             id="subject"
-            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm
+            focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+            dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
             placeholder="Let us know how we can help you"
             required
           />
@@ -47,14 +53,19 @@
             >Mensaje</label
           >
           <textarea
+              name="mensaje"
             id="message"
             rows="6"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300
+            focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600
+            dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
             placeholder="Leave a comment..."></textarea>
         </div>
         <button
           type="submit"
-          class="py-3 px-5 text-sm font-medium text-center orange-400 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          class="py-3 px-5 text-sm font-medium text-center orange-400 rounded-lg bg-primary-700 sm:w-fit
+          hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600
+          dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >Send message</button
         >
       </form>
@@ -62,43 +73,42 @@
   </section>
 </section>
 
-<script>
-  document
-    .getElementById("contact-form")
-    ?.addEventListener("submit", function (event: Event) {
-      event.preventDefault(); //
+{/* <script>
+  function validateEmail(email: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 
-      const emailElement = document.getElementById("email") as HTMLInputElement;
-      const subjectElement = document.getElementById(
-        "subject"
-      ) as HTMLInputElement;
-      const messageElement = document.getElementById(
-        "message"
-      ) as HTMLTextAreaElement;
+  document.getElementById("contact-form")?.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      const email = emailElement.value;
-      const subject = subjectElement.value;
-      const message = messageElement.value;
+    const emailElement = document.getElementById("email") as HTMLInputElement | null;
+    const subjectElement = document.getElementById("subject") as HTMLInputElement | null;
+    const messageElement = document.getElementById("message") as HTMLTextAreaElement | null;
 
-      if (email === "" || subject === "" || message === "") {
-        alert("Por favor, completa todos los campos.");
-        return;
-      }
+    if (!emailElement || !subjectElement || !messageElement) {
+      console.error("No se encontraron todos los elementos del formulario.");
+      return;
+    }
 
-      const formData = {
-        email: email,
-        subject: subject,
-        message: message,
-      };
+    const email = emailElement.value.trim();
+    const subject = subjectElement.value.trim();
+    const message = messageElement.value.trim();
 
-    
-      fetch("http://localhost:3000/api/form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
+    if (!email || !subject || !message) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Por favor, introduce un correo válido.");
+      return;
+    }
+
+    fetch("http://localhost:3000/api/form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, subject, message }),
+    })
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
@@ -108,5 +118,7 @@
           console.error("Error:", error);
           alert("Hubo un error al enviar el formulario");
         });
-    });
-</script>
+  });
+</script> */}
+
+
