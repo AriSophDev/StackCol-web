@@ -73,52 +73,6 @@
   </section>
 </section>
 
-{/* <script>
-  function validateEmail(email: string): boolean {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
 
-  document.getElementById("contact-form")?.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const emailElement = document.getElementById("email") as HTMLInputElement | null;
-    const subjectElement = document.getElementById("subject") as HTMLInputElement | null;
-    const messageElement = document.getElementById("message") as HTMLTextAreaElement | null;
-
-    if (!emailElement || !subjectElement || !messageElement) {
-      console.error("No se encontraron todos los elementos del formulario.");
-      return;
-    }
-
-    const email = emailElement.value.trim();
-    const subject = subjectElement.value.trim();
-    const message = messageElement.value.trim();
-
-    if (!email || !subject || !message) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      alert("Por favor, introduce un correo válido.");
-      return;
-    }
-
-    fetch("http://localhost:3000/api/form", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, subject, message }),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          alert("Formulario enviado exitosamente");
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          alert("Hubo un error al enviar el formulario");
-        });
-  });
-</script> */}
 
 
