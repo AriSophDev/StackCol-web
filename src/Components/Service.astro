@@ -16,7 +16,22 @@
       </div>
     </div>
     <div class="text-center mt-12">
-      <a href="#contact" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">Contáctanos para más información</a>
+      <a href="#contact"  id="contactanos" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">Contáctanos para más información</a>
     </div>
   </div>
 </section>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollButton = document.getElementById("contactanos");
+    const sectionToScrollTo = document.getElementById("Contact");
+
+    if (scrollButton && sectionToScrollTo) {
+      scrollButton.addEventListener("click", function () {
+        sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+</script>

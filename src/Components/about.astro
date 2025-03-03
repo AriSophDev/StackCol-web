@@ -57,9 +57,23 @@
     </div>
   
     <div class="text-center mt-12">
-      <a href="#contact" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg 
+      <a href="#contact"  id="Contactanos" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg
         hover:bg-blue-60 transition duration-300">Contáctanos para más información</a>
     </div>
   </div>
   
 </section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollButton = document.getElementById("Contactanos");
+    const sectionToScrollTo = document.getElementById("Contact");
+
+    if (scrollButton && sectionToScrollTo) {
+      scrollButton.addEventListener("click", function () {
+        sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+</script>
