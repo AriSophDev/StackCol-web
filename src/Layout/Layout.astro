@@ -1,23 +1,54 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
   title: string;
 }
 
-const { StackCol } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Web de stack Col" />
+    <meta name="description" content="Web de stack Col - Agencia de Software" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{StackCol}</title>
+    <title>{title} | StackCol</title>
+    <ViewTransitions />
   </head>
-  <body class="bg-black pt-16">
-    <slot />
+  <body class="bg-[#0a0a0a] text-white/90 selection:bg-orange-500/20">
+    <!-- Modern Dark Background Mesh -->
+    <div class="fixed inset-0 -z-10 h-full w-full bg-[#0a0a0a]">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#3b82f615,transparent_50%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,#f9731610,transparent_50%)]"></div>
+      <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
+    </div>
+    
+    <main class="relative pt-16">
+      <slot />
+    </main>
+    
+    <style is:global>
+      :root {
+        --accent: 255, 165, 0;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #222;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+      }
+    </style>
   </body>
 </html>
 

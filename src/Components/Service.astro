@@ -1,37 +1,111 @@
-<section id="Service" class="flex flex-col items-center justify-center min-h-screen bg-black py-20">
-  <h1 class="text-4xl font-bold text-white mb-8">Servicios</h1>
-  <div class="mx-auto px-4 py-28 md:py-40 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Diseño de Logotipos</h3>
-        <p class="text-gray-700">Creamos logotipos que reflejan la identidad de tu marca y resuenan con tu audiencia.</p>
+<section id="Service" class="py-24 relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Nuestros Servicios</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Soluciones integrales diseñadas para la era digital de 2026.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- Feature 1: Large -->
+      <div class="md:col-span-2 group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 overflow-hidden transition-all hover:bg-white/[0.07] hover:border-orange-500/50 shadow-2xl">
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl group-hover:bg-orange-500/20 transition-colors"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="h-12 w-12 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-6 text-orange-400 group-hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold text-white mb-4">Desarrollo de Software</h3>
+          <p class="text-gray-400 text-lg leading-relaxed max-w-md">
+            Creamos aplicaciones web y móviles robustas, escalables y de alto rendimiento utilizando las últimas tecnologías del mercado.
+          </p>
+          <div class="mt-auto pt-8 flex gap-2">
+            <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400 border border-white/10">React/Next.js</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400 border border-white/10">Node.js</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 text-xs text-gray-400 border border-white/10">Cloud Native</span>
+          </div>
+        </div>
       </div>
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Desarrollo Web</h3>
-        <p class="text-gray-700">Desarrollamos una identidad visual completa para tu marca, incluyendo colores, tipografías y más.</p>
+
+      <!-- Feature 2: Small -->
+      <div class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 transition-all hover:bg-white/[0.07] hover:border-blue-500/50 shadow-2xl">
+        <div class="h-12 w-12 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-4">UI/UX Design</h3>
+        <p class="text-gray-400 leading-relaxed">
+          Diseñamos interfaces intuitivas que priorizan la experiencia del usuario y la conversión.
+        </p>
       </div>
-      <div class="bg-white rounded-lg shadow-lg p-6">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Diseño Web</h3>
-        <p class="text-gray-700">Diseñamos interfaces intuitivas y atractivas que mejoran la experiencia del usuario.</p>
+
+      <!-- Feature 3: Small -->
+      <div class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 transition-all hover:bg-white/[0.07] hover:border-purple-500/50 shadow-2xl">
+        <div class="h-12 w-12 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-4">Branding</h3>
+        <p class="text-gray-400 leading-relaxed">
+          Construimos identidades de marca memorables que destacan en un mercado saturado.
+        </p>
+      </div>
+
+      <!-- Feature 4: Large/Wide -->
+      <div class="md:col-span-2 group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 overflow-hidden transition-all hover:bg-white/[0.07] hover:border-green-500/50 shadow-2xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 h-full">
+          <div class="md:w-1/2">
+            <div class="h-12 w-12 rounded-2xl bg-green-500/20 flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-white mb-4">Estrategia Digital</h3>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              Optimizamos tu presencia online mediante análisis de datos y estrategias de crecimiento personalizadas.
+            </p>
+          </div>
+          <div class="md:w-1/2 flex items-center justify-center bg-white/5 rounded-3xl p-6 border border-white/5">
+            <div class="flex flex-col gap-3 w-full">
+              <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-green-500 w-[80%] animate-pulse"></div>
+              </div>
+              <div class="h-2 w-[70%] bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-500 w-[60%] animate-pulse delay-75"></div>
+              </div>
+              <div class="h-2 w-[90%] bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-orange-500 w-[90%] animate-pulse delay-150"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="text-center mt-12">
-      <a href="#contact"  id="contactanos" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">Contáctanos para más información</a>
+
+    <div class="mt-16 text-center">
+      <button data-scroll="Contact" class="inline-flex items-center gap-2 group text-white font-medium hover:text-orange-400 transition-colors">
+        Solicitar presupuesto personalizado
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </button>
     </div>
   </div>
 </section>
 
-
-
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollButton = document.getElementById("contactanos");
-    const sectionToScrollTo = document.getElementById("Contact");
-
-    if (scrollButton && sectionToScrollTo) {
-      scrollButton.addEventListener("click", function () {
-        sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+  function setupServiceScroll() {
+    const buttons = document.querySelectorAll('#Service [data-scroll]');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-scroll');
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       });
-    }
-  });
+    });
+  }
+
+  setupServiceScroll();
+  document.addEventListener('astro:page-load', setupServiceScroll);
 </script>
